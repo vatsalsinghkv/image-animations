@@ -2,13 +2,17 @@
   position: relative;
   border-radius: 10px;
   overflow: hidden;
-  background-color: #232c33;
+  min-height: 24rem;
+  background-color: var(--color-grey-1);
+  width: 100%;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
     rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 
   &__img {
     display: block;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: all 0.5s;
   }
 
@@ -86,8 +90,8 @@
     position: absolute;
     opacity: 1;
     visibility: visible;
-    background: #020617;
-    transform: translateX(-100%);
+    background: var(--color-dark);
+    transform: translateX(-110%);
   }
 
   &:hover {
@@ -111,7 +115,7 @@
     opacity: 1;
     top: auto;
     transform: translateY(100%);
-    background-color: #020617;
+    background-color: var(--color-dark);
   }
 
   &:hover {
@@ -265,7 +269,7 @@
 
 .card-9 {
   .card__backdrop {
-    background-color: #020617;
+    background-color: var(--color-dark);
     transform: translateY(-100%);
     opacity: 1;
     visibility: visible;
