@@ -1,0 +1,47 @@
+@use './variables' as *;
+@use 'sass:math';
+
+/*
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+html {
+  font-size: math.div(100, 16) * 10%;
+  //62.5% - 10px
+  // font-size: 10px;
+
+  /*   @media only screen and (max-width: $lg) {
+    font-size: math.div(100, 16) * 9%;
+  }
+
+  @media only screen and (max-width: $md) {
+    font-size: math.div(100, 16) * 8%;
+  } */
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size);
+  font-weight: 400;
+  line-height: 165%;
+  padding: 0 5%;
+  color: var(--color-text);
+  min-height: 100vh;
+}
+
+.wrapper {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+
+  @media screen and (max-width: $sm) {
+    gap: 25px;
+  }
+  justify-items: center;
+}

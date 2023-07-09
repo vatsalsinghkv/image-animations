@@ -1,0 +1,23 @@
+h1 {
+  font-size: 3rem; /* 30px */
+  line-height: 3.6rem; /* 36px */
+}
+
+h2 {
+  font-size: 2.4rem; /* 24px */
+  line-height: 3.2rem; /* 32px */
+}
+
+h3 {
+  font-size: 2rem; /* 20px */
+  line-height: 2.8rem; /* 28px */
+}
+
+.title {
+  text-align: center;
+  margin: 70px 0;
+
+  @media screen and (max-width: 640px) {
+    margin: 30px 0;
+  }
+}

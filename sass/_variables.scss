@@ -1,0 +1,26 @@
+@use 'sass:math';
+
+:root {
+  --color-bg: #efefef;
+  --color-bg-dark: rgba(0, 0, 0, 0.65);
+  --color-accent: #14cf93;
+  --color-text: #1e293b;
+  --color-dark: #000;
+  --color-dark-1: #0f172a;
+  --color-dark-2: #334155;
+
+  // FONTS
+  --font-primary: 'Inter', sans-serif;
+  --font-size: 1.6rem; // 16px
+
+  // Size
+  --max-width: 128rem; // 1280px
+}
+
+// BREAK POINTS (ems)
+$xxl: math.div(1536, 16) * 1em;
+$xl: math.div(1280, 16) * 1em;
+$lg: math.div(1024, 16) * 1em;
+$md: math.div(768, 16) * 1em;
+$sm: math.div(640, 16) * 1em;
+$xs: math.div(330, 16) * 1em;
