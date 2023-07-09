@@ -1,14 +1,335 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  min-height: 100vh;
+  padding: 6% 8%;
+  font-family: sans-serif;
+  background-color: #efefef;
+  color: #1e293b;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.title {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+@media screen and (max-width: 640px) {
+  .title {
+    margin-bottom: 30px;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+  justify-items: center;
+}
+
+.card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #232c33;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.card__img {
+  display: block;
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.card__backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  /* background: linear-gradient(0deg, rgba(0, 0, 0, 1), transparent); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+  /* backdrop-filter: blur(2px); */
+}
+
+.card:hover .card__backdrop {
+  visibility: visible;
+  opacity: 1;
+}
+
+.card__caption {
+  color: #fff;
+  text-align: center;
+}
+
+.card__caption h1 {
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.card__caption:not(:last-child) {
+  padding-bottom: 10px;
+}
+
+/* CARDS */
+
+/* Card-1 */
+
+.card-1 .card__backdrop {
+  backdrop-filter: blur(2px);
+}
+
+.card-1:hover .card__img {
+  transform: scale(1.3);
+}
+
+/* Card-2 */
+
+.card-2 .card__backdrop {
+  backdrop-filter: blur(2px);
+}
+
+.card-2:hover .card__img {
+  transform: scale(1.3) rotate(15deg);
+}
+
+/* Card-3 */
+
+.card-3 .card__backdrop {
+  /* opacity: 1; */
+  transform: translateX(-100%);
+}
+
+.card-3:hover .card__backdrop {
+  transform: translateX(0);
+}
+
+/* Card-4 */
+
+.card-4 .card__backdrop {
+  position: absolute;
+  opacity: 1;
+  visibility: visible;
+  background: #020617;
+  transform: translateX(-100%);
+}
+
+.card-4:hover .card__backdrop {
+  transform: translateX(0);
+}
+
+.card-4:hover .card__img {
+  transform: translateX(100%);
+}
+
+/* Card-5 */
+
+.card-5 .card__backdrop {
+  height: 100px;
+  bottom: 0;
+  visibility: visible;
+  opacity: 1;
+  top: auto;
+  transform: translateY(100%);
+  background-color: #020617;
+}
+
+.card-5:hover .card__backdrop {
+  transform: translateY(0);
+}
+
+.card-5:hover .card__img {
+  transform: translateY(-100px);
+}
+
+/* Card-6 */
+
+.card-6 .card__backdrop {
+  transform: translateY(100%);
+  transition: all 0.4s;
+  transition-delay: 0.75s;
+}
+
+.card-6:hover .card__backdrop {
+  transform: translateY(0);
+  transition-delay: 0s;
+}
+
+.card-6 .card__caption h1,
+.card-6 .card__caption p {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-30px);
+}
+
+.card-6:hover .card__caption h1,
+.card-6:hover .card__caption p {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.card-6 .card__caption p {
+  transition-delay: 0.25s !important;
+}
+
+.card-6:hover .card__caption h1 {
+  transition-delay: 0.6s;
+}
+
+.card-6:hover .card__caption p {
+  transition-delay: 0.4s !important;
+}
+
+/* Card-7 */
+
+.card-7::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 130%;
+  height: 220%;
+  background-color: rgba(0, 0, 0, 0.65);
+  /* background: linear-gradient(0deg, rgba(0, 0, 0, 1), transparent); */
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(85%, 40%) rotate(45deg);
+  transition: all 0.75s;
+}
+
+.card-7:hover::before {
+  transform: translate(-10%, -30%) rotate(45deg);
+  visibility: visible;
+  opacity: 1;
+}
+
+.card-7 .card__caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card .card__caption h1,
+.card .card__caption p {
+  transition: all 0.75s;
+}
+
+.card-7 .card__caption h1 {
+  transform: translate(200px, -200px);
+}
+
+.card-7 .card__caption p {
+  transform: translate(-200px, 200px);
+}
+
+.card:hover .card__caption h1,
+.card:hover .card__caption p {
+  transform: translate(0, 0);
+}
+
+/* Card-8 */
+
+.card-8 .card__backdrop {
+  transform: scale(0) rotate(-180deg);
+  transition: all 0.3s;
+}
+
+/* When hover over card wait .5s before coming to screen so image can scale down before backdrop */
+.card-8:hover .card__backdrop {
+  transform: scale(1) rotate(0deg);
+  transition-delay: 0.2s;
+}
+
+/*  When you move cusor out the image should take .5s before coming back, so backdrop can disappear before the image */
+.card-8 .card__img {
+  transition: all 0.5s;
+  transition-delay: 0.25s;
+}
+
+/* When you hover card image should scale down without any delay */
+.card-8:hover .card__img {
+  transform: scale(0);
+  transition-delay: 0s;
+}
+/* Card-9 */
+
+.card-9 .card__backdrop {
+  background-color: #020617;
+  transform: translateY(-100%);
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+
+.card-9:hover .card__backdrop {
+  transform: translateY(0);
+  transition-delay: 0.25s;
+}
+
+.card-9 .card__caption h1 {
+  transform: translateY(-30px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.card-9 .card__caption p {
+  transform: translateY(-30px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+  transition-delay: 0.25s;
+}
+
+.card-9:hover .card__caption h1,
+.card-9:hover .card__caption p {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.card-9:hover .card__caption h1 {
+  transition-delay: 0.8s;
+}
+
+.card-9:hover .card__caption p {
+  transition-delay: 0.6s;
+}
+
+.card-9 .card__img {
+  transition-delay: 0.75s;
+}
+
+.card-9:hover .card__img {
+  transform: scale(0) rotate(720deg);
+  transition-delay: 0s;
+}
+
+.attribution {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: #64748b;
+  transition: all 0.5s;
+}
+
+.attribution a:hover,
+.attribution a:focus {
+  color: #3b82f6;
 }
