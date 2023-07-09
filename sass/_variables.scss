@@ -1,6 +1,42 @@
 @use 'sass:math';
 
 :root {
+  @font-face {
+    font-family: 'CerebriSansPro';
+    src: url('../fonts/CerebriSansPro-Light.ttf') format('truetype');
+    font-weight: 300;
+  }
+
+  @font-face {
+    font-family: 'CerebriSansPro';
+    src: url('../fonts/CerebriSansPro-Regular.ttf') format('truetype');
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: 'CerebriSansPro';
+    src: url('../fonts/CerebriSansPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: 'CerebriSansPro';
+    src: url('../fonts/CerebriSansPro-Bold.ttf') format('truetype');
+    font-weight: 600;
+  }
+
+  @font-face {
+    font-family: 'CerebriSansPro';
+    src: url('../fonts/CerebriSansPro-SemiBold.ttf') format('truetype');
+    font-weight: 700;
+  }
+
+  @font-face {
+    font-family: 'CerebriSansPro';
+    src: url('../fonts/CerebriSansPro-Heavy.ttf') format('truetype');
+    font-weight: 800;
+  }
+
   --color-bg: #efefef;
   --color-bg-dark: rgba(0, 0, 0, 0.65);
   --color-accent: #14cf93;
@@ -10,7 +46,7 @@
   --color-dark-2: #334155;
 
   // FONTS
-  --font-primary: 'Inter', sans-serif;
+  --font-primary: 'CerebriSansPro', 'Inter', sans-serif;
   --font-size: 1.6rem; // 16px
 
   // Size
