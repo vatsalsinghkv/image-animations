@@ -55,6 +55,7 @@
 - [ ] Add share buttons
 - [ ] Add code preview feature
 - [ ] Add more animation effects
+- [ ] Add dark mode
 
 ## Contact
 
