@@ -91,7 +91,7 @@
     opacity: 1;
     visibility: visible;
     background: var(--color-dark);
-    transform: translateX(-110%);
+    transform: translateX(-100%);
   }
 
   &:hover {
@@ -240,6 +240,8 @@
 /* Card-8 */
 
 .card-8 {
+  background-color: var(--color-grey-2);
+
   .card__backdrop {
     transform: scale(0) rotate(-180deg);
     transition: all 0.3s;
@@ -268,6 +270,8 @@
 /* Card-9 */
 
 .card-9 {
+  background-color: var(--color-grey-2);
+
   .card__backdrop {
     background-color: var(--color-dark);
     transform: translateY(-100%);
