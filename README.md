@@ -1,5 +1,5 @@
 <h1 align="center">
-  Image Animations with CSS
+  Image Animations
 </h1>
 
 <p align="center">
@@ -7,15 +7,16 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Version-1.2.0-blue"/ >
+  <img src="https://img.shields.io/badge/Version-1.1.0-blue"/ >
 </p>
 
-[![Preview](https://i.ibb.co/yXBnPYQ/Screenshot-2023-07-09-at-3-43-14-PM.png)](https://image-animations.vercel.app/)
+[![Preview](https://github.com/vatsalsinghkv/image-animations/assets/68834718/f2061129-3608-444c-b948-a5196510c1a4)](https://image-animations.vercel.app/)
 
 ## Built With
 
 - [Vite.js](https://vitejs.dev/)
 - [sass](https://sass-lang.com/)
+- [Unsplash API](https://awik.io/generate-random-images-unsplash-without-using-api/) - https://source.unsplash.com/
 
 ## How To Use
 
@@ -51,8 +52,9 @@
 
 ## Continuous Development
 
-- [ ] Add Share buttons
-- [ ] Add Code preview feature
+- [ ] Add share buttons
+- [ ] Add code preview feature
+- [ ] Add more animation effects
 
 ## Contact
 
