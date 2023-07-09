@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Version-1.1.0-blue"/ >
+  <img src="https://img.shields.io/badge/Version-1.1.1-blue"/ >
 </p>
 
 [![Preview](https://github.com/vatsalsinghkv/image-animations/assets/68834718/f2061129-3608-444c-b948-a5196510c1a4)](https://image-animations.vercel.app/)

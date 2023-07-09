@@ -38,10 +38,10 @@ body {
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
   gap: 50px;
 
   @media screen and (max-width: $sm) {
     gap: 25px;
   }
-  justify-items: center;
 }
