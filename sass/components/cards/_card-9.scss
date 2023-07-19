@@ -1,0 +1,58 @@
+.card-9 {
+  background-color: var(--color-grey-2);
+
+  .card__backdrop {
+    background-color: var(--color-dark);
+    transform: translateY(-100%);
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+  }
+
+  .card__img {
+    transition-delay: 0.75s;
+  }
+
+  .card__caption {
+    h1,
+    p {
+      transform: translateY(-30px);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.5s;
+    }
+
+    p {
+      transition-delay: 0.25s;
+    }
+  }
+
+  &:hover {
+    .card__backdrop {
+      transform: translateY(0);
+      transition-delay: 0.25s;
+    }
+
+    .card__img {
+      transform: scale(0) rotate(720deg);
+      transition-delay: 0s;
+    }
+
+    .card__caption {
+      h1,
+      p {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+
+      h1 {
+        transition-delay: 0.8s;
+      }
+
+      p {
+        transition-delay: 0.6s;
+      }
+    }
+  }
+}

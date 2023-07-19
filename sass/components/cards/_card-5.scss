@@ -1,0 +1,21 @@
+.card-5 {
+  .card__backdrop {
+    height: 100px;
+    bottom: 0;
+    visibility: visible;
+    opacity: 1;
+    top: auto;
+    transform: translateY(100%);
+    background-color: var(--color-dark);
+  }
+
+  &:hover {
+    .card__backdrop {
+      transform: translateY(0);
+    }
+
+    .card__img {
+      transform: translateY(-100px);
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  min-height: 24rem;
+  background-color: var(--color-grey-1);
+  width: 100%;
+  box-shadow:
+    rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s;
+  }
+
+  &__backdrop {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    /* background: linear-gradient(0deg, rgba(0, 0, 0, 1), transparent); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+    /* backdrop-filter: blur(2px); */
+  }
+
+  &:hover &__backdrop {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .card__caption {
+    color: #fff;
+    text-align: center;
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
+  }
+}

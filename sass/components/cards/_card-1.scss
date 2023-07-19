@@ -1,0 +1,9 @@
+.card-1 {
+  .card__backdrop {
+    backdrop-filter: blur(2px);
+  }
+
+  &:hover .card__img {
+    transform: scale(1.3);
+  }
+}

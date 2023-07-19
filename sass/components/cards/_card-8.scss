@@ -1,0 +1,28 @@
+.card-8 {
+  background-color: var(--color-grey-2);
+
+  .card__backdrop {
+    transform: scale(0) rotate(-180deg);
+    transition: all 0.3s;
+  }
+
+  /*  When you move cusor out the image should take .5s before coming back, so backdrop can disappear before the image */
+  .card__img {
+    transition: all 0.5s;
+    transition-delay: 0.25s;
+  }
+
+  /* When hover over card wait .5s before coming to screen so image can scale down before backdrop */
+  &:hover {
+    .card__backdrop {
+      transform: scale(1) rotate(0deg);
+      transition-delay: 0.2s;
+    }
+
+    /* When you hover card image should scale down without any delay */
+    .card__img {
+      transform: scale(0);
+      transition-delay: 0s;
+    }
+  }
+}

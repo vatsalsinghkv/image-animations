@@ -1,0 +1,46 @@
+.card-6 {
+  .card__backdrop {
+    transform: translateY(100%);
+    transition: all 0.4s;
+    transition-delay: 0.75s;
+  }
+
+  .card__caption {
+    h1,
+    p {
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.5s;
+      transform: translateY(-30px);
+    }
+
+    p {
+      transition-delay: 0.25s !important;
+    }
+  }
+
+  &:hover {
+    .card__backdrop {
+      transform: translateY(0);
+      transition-delay: 0s;
+    }
+
+    .card__caption {
+      h1,
+      p {
+        opacity: 1;
+        visibility: visible;
+
+        transform: translateY(0);
+      }
+
+      h1 {
+        transition-delay: 0.6s;
+      }
+
+      p {
+        transition-delay: 0.4s !important;
+      }
+    }
+  }
+}

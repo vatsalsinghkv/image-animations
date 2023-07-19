@@ -1,0 +1,10 @@
+.card-3 {
+  .card__backdrop {
+    /* opacity: 1; */
+    transform: translateX(-100%);
+  }
+
+  &:hover .card__backdrop {
+    transform: translateX(0);
+  }
+}

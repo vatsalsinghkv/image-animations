@@ -1,0 +1,19 @@
+.card-4 {
+  .card__backdrop {
+    position: absolute;
+    opacity: 1;
+    visibility: visible;
+    background: var(--color-dark);
+    transform: translateX(-100%);
+  }
+
+  &:hover {
+    .card__backdrop {
+      transform: translateX(0);
+    }
+
+    .card__img {
+      transform: translateX(100%);
+    }
+  }
+}

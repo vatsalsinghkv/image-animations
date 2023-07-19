@@ -1,0 +1,56 @@
+.card-7 {
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 130%;
+    height: 220%;
+    background-color: rgba(0, 0, 0, 0.65);
+    /* background: linear-gradient(0deg, rgba(0, 0, 0, 1), transparent); */
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(85%, 40%) rotate(45deg);
+    transition: all 0.75s;
+  }
+
+  .card__caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .card__caption {
+    h1,
+    p {
+      transition: all 0.75s;
+    }
+
+    h1 {
+      transform: translate(200px, -200px);
+    }
+
+    p {
+      transform: translate(-200px, 200px);
+    }
+  }
+
+  &:hover {
+    &::before {
+      transform: translate(-10%, -30%) rotate(45deg);
+      visibility: visible;
+      opacity: 1;
+    }
+    .card__caption {
+      h1,
+      p {
+        transform: translate(0, 0);
+      }
+    }
+  }
+}

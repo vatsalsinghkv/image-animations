@@ -1,0 +1,11 @@
+/* Card-2 */
+
+.card-2 {
+  .card__backdrop {
+    backdrop-filter: blur(2px);
+  }
+
+  &:hover .card__img {
+    transform: scale(1.3) rotate(15deg);
+  }
+}
