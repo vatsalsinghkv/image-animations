@@ -1,0 +1,70 @@
+.card-10 {
+  height: 40rem;
+  overflow: hidden;
+
+  .card__backdrop {
+    transition-delay: 0.5s;
+  }
+
+  .card__caption {
+    border-top-right-radius: inherit;
+    border-top-left-radius: inherit;
+    padding: 2.25rem;
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    height: 7.2rem;
+    color: var(--color-text);
+    background: var(--color-light);
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.5s;
+    transition-delay: 0.5s;
+
+    h1 {
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      line-height: 130%;
+      margin-bottom: 3rem;
+    }
+  }
+
+  .card__text {
+    transition: all 0.5s;
+    opacity: 0;
+  }
+
+  .card__link {
+    transition: all 0.5s;
+    background: var(--color-text);
+    color: var(--color-light);
+    text-transform: capitalize;
+    padding: 1rem 1.5rem;
+    border-radius: 3px;
+
+    &:hover {
+      transition-delay: 0s;
+      background-color: var(--color-accent);
+    }
+  }
+
+  &:hover {
+    .card__caption {
+      height: 100%;
+      width: 100%;
+      transition-delay: 0s;
+    }
+
+    .card__backdrop {
+      transition-delay: 0s;
+    }
+
+    .card__text {
+      opacity: 1;
+      transition-delay: 0.5s;
+    }
+  }
+}
