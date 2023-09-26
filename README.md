@@ -18,7 +18,13 @@
 - [sass](https://sass-lang.com/)
 - [Unsplash API](https://awik.io/generate-random-images-unsplash-without-using-api/) - https://source.unsplash.com/
 
-## How To Use
+## Contributing
+
+###### Join Our Discord: [https://discord.gg/St2dHg9YwA](https://discord.gg/St2dHg9YwA)
+
+Remember, Good PR makes you a Good contributor!
+
+### 1. Setting up the project locally
 
 ###### To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [yarn](https://yarnpkg.com) installed on your computer).
 
@@ -49,6 +55,10 @@
 ```
 
 - To change the image effects, edit `sass/components/_cards.scss`
+
+### 2. Contributing Guidelines
+
+- [Contributing Guidelines](/CONTRIBUTING.md) to be followed.
 
 ## Continuous Development
 
